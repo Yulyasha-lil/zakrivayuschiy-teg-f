@@ -30,15 +30,20 @@
   <body class="page">
     <header class="header">
       <h1 class="header__logo">&lt;/HTML&gt;</h1>
-      <h2 class="header__title">закрывающий тег</h2>
+      <p class="header__title">закрывающий тег</p>
     </header>
     <main class="content">
       <ul class="content__list">
         <li class="content__list-item">
           <article class="card">
-            <h3 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+            <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
             <div class="card__picture">
-              <img class="card__picture-van" src="./images/mountains.jpg" alt="Ночной фургон">
+              <img 
+                  class="card__picture-image" 
+                  src="./images/mountains.jpg" 
+                  alt="Человек сидит в поле и смотрит на горы"
+                  loading="lazy"
+              >
               <span class="card__picture-watermark">&lt;/HTML и CSS&gt;</span>
             </div>
             <div class="card__text">
@@ -46,13 +51,14 @@
               <p>Это было время приятного предвкушения. Всё было новым, интересным и не казалось слишком сложным. Как будто перед долгой и увлекательной дорогой, когда ты полон сил и энтузиазма.</p>
             </div>
             <div class="content__button">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Like">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   width="39" 
                   height="36" 
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                   viewBox="0 0 39 36">
                   <g class="heart">
                     <path 
@@ -88,9 +94,14 @@
         </li>
         <li class="content__list-item">
           <article class="card">
-            <h3 class="card__title">1 спринт: Я — чистый лист</h3>
+            <h2 class="card__title">1 спринт: Я — чистый лист</h2>
             <div class="card__picture">
-              <img class="card__picture-van contrast" src="./images/street.jpg" alt="Ночной фургон">
+              <img 
+                class="card__picture-image contrast" 
+                src="./images/street.jpg" 
+                alt="Улочка с белыми домами"
+                loading="lazy"
+              >
               <span class="card__picture-watermark">&lt;/Flex- и grid-layout&gt;</span>
             </div>
             <div class="card__text">
@@ -98,13 +109,14 @@
               <p>Страх «чистого листа» был, но его быстро сменило любопытство. Хотелось поскорее заглянуть в код и понять, как же всё это работает. Начало было обнадёживающим.</p>
             </div>
             <div class="content__button">
-               <button class="card__icon-button">
+               <button class="card__icon-button" type="button" aria-label="Like">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   width="39" 
                   height="36" 
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                   viewBox="0 0 39 36">
                   <g class="heart">
                     <path 
@@ -140,9 +152,14 @@
         </li>
         <li class="content__list-item">
           <article class="card">
-            <h3 class="card__title">1 спринт: А если не получится?</h3>
+            <h2 class="card__title">1 спринт: А если не получится?</h2>
             <div class="card__picture">
-              <img class="card__picture-van grayscale" src="./images/japanese-store.jpg" alt="Ночной фургон">
+              <img 
+                class="card__picture-image grayscale" 
+                src="./images/japanese-store.jpg" 
+                alt="Японский магазинчик"
+                loading="lazy"
+              >
               <span class="card__picture-watermark">&lt;/Первый лендинг&gt;</span>
             </div>
             <div class="card__text">
@@ -150,13 +167,14 @@
               <p>А потом получилось! Первый лендинг, пусть и простой, но такой важный. Он перестал быть абстрактной задачей и стал реальной строчкой в портфолио. Это дало огромный заряд уверенности и желание двигаться дальше.</p>
             </div>
             <div class="content__button">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Like">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   width="39" 
                   height="36" 
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                   viewBox="0 0 39 36">
                   <g class="heart">
                     <path 
@@ -192,9 +210,14 @@
         </li>
         <li class="content__list-item">
           <article class="card">
-            <h3 class="card__title">2 спринт: Погоня за идеалом</h3>
+            <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
             <div class="card__picture">
-              <img class="card__picture-van hue" src="./images/cyclist.jpg" alt="Ночной фургон">
+              <img 
+                class="card__picture-image hue" 
+                src="./images/cyclist.jpg" 
+                alt="Велосипедист на фоне стеклянного здания"
+                loading="lazy"
+              >
               <span class="card__picture-watermark">&lt;/Псевдоклассы и псевдоэлементы&gt;</span>
             </div>
             <div class="card__text">
@@ -202,13 +225,14 @@
               <p>Открыв для себя мир псевдоклассов, я поняла, что вёрстка — это не просто расставить блоки. С помощью :hover, :focus и ::before элементы оживали, становясь по-настоящему интерактивными. Каждый псевдоэлемент был как маленькое волшебство, превращающее обычную страницу в нечто большее.</p>
             </div>
             <div class="content__button">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Like">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   width="39" 
                   height="36" 
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                   viewBox="0 0 39 36">
                   <g class="heart">
                     <path 
@@ -244,9 +268,14 @@
         </li>
         <li class="content__list-item">
           <article class="card">
-            <h3 class="card__title">2 спринт: О тех, кто рядом</h3>
+            <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
             <div class="card__picture">
-              <img class="card__picture-van bright" src="./images/sea.jpg" alt="Ночной фургон">
+              <img 
+                class="card__picture-image bright" 
+                src="./images/sea.jpg" 
+                alt="Семья на фоне морских волн и заката"
+                loading="lazy"
+              >
               <span class="card__picture-watermark">&lt;/Формы&gt;</span>
             </div>
             <div class="card__text">
@@ -254,13 +283,14 @@
               <p>Оглядываясь назад, понимаешь, что справиться помогали не только собственные силы. Поддержка кураторов и одногруппников, которые сталкивались с теми же проблемами, была бесценна. Осознание, что ты не один в этой борьбе с кодом, очень помогало.</p>
             </div>
             <div class="content__button">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Like">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   width="39" 
                   height="36" 
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                   viewBox="0 0 39 36">
                   <g class="heart">
                     <path 
@@ -296,9 +326,14 @@
         </li>
         <li class="content__list-item">
           <article class="card">
-            <h3 class="card__title">3 спринт: Обходные стратегии</h3>
+            <h2 class="card__title">3 спринт: Обходные стратегии</h2>
             <div class="card__picture">
-              <img class="card__picture-van sepia" src="./images/bay.jpg" alt="Ночной фургон">
+              <img 
+                class="card__picture-image sepia" 
+                src="./images/bay.jpg" 
+                alt="Бухта на фоне гор"
+                loading="lazy"
+              >
               <span class="card__picture-watermark">&lt;/Адаптив&gt;</span>
             </div>
             <div class="card__text">
@@ -306,13 +341,14 @@
               <p>Адаптивная вёрстка стала тем самым моментом, когда пришлось научиться смотреть на задачу под разными углами. Голова была сломана не раз, но с каждой решённой задачей приходило понимание, что нет нерешаемых проблем, есть лишь задачи, для которых нужно найти свой «обходной путь».</p>
             </div>
             <div class="content__button">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Like">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   width="39" 
                   height="36" 
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                   viewBox="0 0 39 36">
                   <g class="heart">
                     <path 
@@ -348,9 +384,14 @@
         </li>
         <li class="content__list-item">
           <article class="card">
-            <h3 class="card__title">3 спринт: Когда опускаются руки</h3>
+            <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
             <div class="card__picture">
-              <img class="card__picture-van saturate" src="./images/moon.jpg" alt="Ночной фургон">
+              <img 
+                class="card__picture-image saturate" 
+                src="./images/moon.jpg" 
+                alt="Луна"
+                loading="lazy"
+              >
               <span class="card__picture-watermark">&lt;/Графика&gt;</span>
             </div>
             <div class="card__text">
@@ -358,13 +399,14 @@
               <p>Когда над сложной анимацией опускались руки, я вспоминала, что за каждой строчкой кода стоит будущая живая графика, которая оживит мой сайт. И это стоило того, чтобы собраться и сделать еще одну попытку.</p>
             </div>
             <div class="content__button">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Like">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   width="39" 
                   height="36" 
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                   viewBox="0 0 39 36">
                   <g class="heart">
                     <path 
@@ -400,9 +442,14 @@
         </li>
         <li class="content__list-item">
           <article class="card">
-            <h3 class="card__title">«Сейчас я здесь»</h3>
+            <h2 class="card__title">«Сейчас я здесь»</h2>
             <div class="card__picture">
-              <img class="card__picture-van multiple" src="./images/river.jpg" alt="Ночной фургон">
+              <img 
+                class="card__picture-image multiple" 
+                src="./images/river.jpg" 
+                alt="Люди прыгают с камня в реку"
+                loading="lazy"
+              >
               <span class="card__picture-watermark">&lt;/Анимация&gt;</span>
             </div>
             <div class="card__text">
@@ -410,13 +457,14 @@
               <p>Сейчас я на финишной прямой. Путь был непростым: от лёгкого любопытства до настоящих битв с адаптивом и анимацией. Это самый сложный, но и самый интересный этап. Понимаю, что это только начало большого пути в постоянно меняющемся мире веб-разработки, но теперь я знаю, что могу справляться со сложностями. И это чувство — главный результат.</p>
             </div>
             <div class="content__button">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Like">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   width="39" 
                   height="36" 
                   fill="none"
                   class="like-icon"
+                  aria-hidden="true"
                   viewBox="0 0 39 36">
                   <g class="heart">
                     <path 
@@ -456,17 +504,25 @@
           type="button"
           onclick="window['pop'].showModal()"
           aria-controls="pop">
-          <svg class="floppy-icon" viewBox="0 0 39 39">
+          <svg 
+            class="floppy-icon" 
+            aria-hidden="true"
+            viewBox="0 0 39 39"
+          >
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
           <span class="button__text">Сохранить на память</span>
         </button>
         <dialog id="pop" class="popup">
           <div class="popup__content">
-            <svg class="popup__floppy-icon" viewBox="0 0 39 39">
+            <svg 
+              class="popup__floppy-icon" 
+              aria-hidden="true"
+              viewBox="0 0 39 39"
+            >
               <use href="./svg/floppy.svg#floppy"></use>
             </svg>
-            <span class="button__text">Вставьте дискету, чтобы продолжить</span>
+            <p class="button__text">Вставьте дискету, чтобы продолжить</p>
           </div>
           <form method="dialog" class="form">
             <button

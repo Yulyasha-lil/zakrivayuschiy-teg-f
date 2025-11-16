@@ -1,8 +1,8 @@
 :root {
   --main-font-family: 'Inter-Variable', sans-serif;
-  --accent-font-family: 'PressStart2P', sans-serif;
+  --accent-font-family: 'PressStart2P', fantasy;
   --main-font-weight: 410;
-  --h3-font-weight: 715;
+  --title-font-weight: 715;
   --accent-font-weight: 400;
   --bg-gradient:
     repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
