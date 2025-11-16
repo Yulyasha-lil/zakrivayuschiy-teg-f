@@ -1,16 +1,309 @@
-/* Здесь вы напишете основную часть стилей страницы.
+@supports ((text-stroke: 1px var(--bg-color, rgba(255 255 255 / 1))) or 
+(-webkit-text-stroke: 1px var(--bg-color, rgba(255 255 255 / 1)))) {
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
+  .watermark {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--bg-color, rgba(255 255 255 / 1));
+    text-stroke: 1px var(--bg-color, rgba(255 255 255 / 1));
+  }
+  
+}
 
 .page {
+  box-sizing: border-box;
+  margin-block: 100px;
+  color: var(--accent-color);
+  font-family: var(--main-font-family), sans-serif;
+  background-image: var(--bg-gradient);
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: 'wght' var( --main-font-weight, 410);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  inline-size: var(--width-content);
+  margin-inline: auto;
+  margin-block-end: 100px;
+  border: var( --main-border);
+  font-family: var(--accent-font-family, 'PressStart2P'), sans-serif;
+  font-weight: var(--accent-font-weight, 400);
+  line-height: 1;
+  text-transform: uppercase;
+  background-color: var(--bg-color, rgba(255 255 255 / 1));
+}
+
+.header__logo {
+  padding-block: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem) 20px;
+  font-weight: var(--main-font-weight, 410);
+  font-size: clamp(3.063rem, 2.71rem + 1.5vw, 4.063rem);
+}
+
+.header__title {
+  padding-block-end: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem);
+  font-weight: var(--main-font-weight, 410);
+  font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.card {
+  inline-size: var(--width-content, clamp(375px, calc(260.56px + 30.52vw), 700px));
+  margin-inline: auto;
+  border: var( --main-border);
+  background-color: var(--bg-color);
+}
+
+.card__title {
+  padding: 4px 10px;
+  font-size: var(--main-font-size, 18px);
+  font-variation-settings: 'wght' var(--h3-font-weight, 715);
+}
+
+.card__picture {
+  position: relative;
+}
+
+.card__picture-van {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.card__picture-watermark {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  opacity: 0.5;
+  color: var(--color);
+  font-family: var(--accent-font-family), sans-serif;
+  font-weight: var(--accent-font-weight, 400);
+  font-size: var(--accent-font-size);
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 
+      -1px 0 var(--bg-color, rgba(255 255 255 / 1)),
+      0 1px var(--bg-color, rgba(255 255 255 / 1)),
+      1px 0 var(--bg-color, rgba(255 255 255 / 1)),
+      0 -1px var(--bg-color, rgba(255 255 255 / 1));
+  mix-blend-mode: hard-light;
+  }
+
+.contrast {
+  filter: contrast(50%);
+}
+
+.grayscale {
+  filter: grayscale(90%);
+}
+
+.hue {
+  filter: hue-rotate(-90deg);
+}
+
+.bright {
+  filter: brightness(70%);
+}
+
+.sepia {
+  filter: sepia(100%);
+}
+
+.saturate {
+  filter: saturate(150%);
+}
+
+.multiple {
+  filter: blur(2px) hue-rotate(50deg);
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 27px;
+  font-family:var(--main-font-family), sans-serif;
+  font-size: var(--main-font-size, 18px);
+  line-height: 1.17em;
+}
+
+.content__button{
+  display: flex;
+  justify-content : flex-end;
+  align-items: center;
+  gap: 7px;
+  padding: 0 25px 25px 0;
+}
+
+.card__icon-button {
+  border: none;
+  background-color: transparent;
+  transition: border 0.3s ease;
+  max-block-size: 38px;
+}
+
+.card__icon-button:focus-visible {
+  border: var(--main-border);
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.like-icon {
+  display: block;
+  inline-size: 39px;
+  block-size: 36px;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.button {
+  position: relative;
+  box-shadow: none;
+  color: var(--color);
+  font-family: var(--accent-font-family, 'PressStart2P'), sans-serif;
+  font-weight: var(--accent-font-weight, 40);
+  font-size: var(--accent-font-size);
+  background-color: transparent;
+  transition: box-shadow 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.button:focus {
+  box-shadow: 2px 2px 0 0 rgba(0 0 0 / 1);
+  outline: none;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  block-size: 100%;
+  inline-size: 100%;
+  background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button .button__text {
+  position: relative;
+  z-index: 1;
+  color: var(--bg-color);
+  mix-blend-mode: difference;
+}
+
+.card__like-button {
+  border: var(--main-border);
+  inline-size: 130px;
+  min-block-size: 38px;
+}
+
+.section-save__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 50px auto 100px;
+  border: var( --main-border);
+  padding: 20.5px 20px;
+  background-color: var(--bg-color);
+  cursor: pointer;
+  white-space: nowrap;
+  inline-size: clamp(19.125rem, 18.487rem + 2.72vw, 20.938rem);
+}
+
+.button svg {
+  position: relative;
+  z-index: 1;
+  color: var(--bg-color);
+  mix-blend-mode: difference;
+}
+
+.button_ok {
+  border: var( --main-border);
+  padding-block-start: 12.5px;
+  padding-block-end: 12.5px;
+  text-transform: uppercase;
+  inline-size: 100%;
+}
+
+.floppy-icon {
+  display: block;
+  max-inline-size: 21px;
+  aspect-ratio: 1 / 1;
+}
+
+.popup {
+  border: var( --main-border);
+  padding: 30px;
+  color: var(--accent-color);
+  font-family: var(--accent-font-family,'PressStart2P'), sans-serif;
+  line-height: 1.5;
+  text-transform: uppercase;
+  background-color: var(--bg-color);
+  max-inline-size: 357px;
+}
+
+.popup[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.popup__text {
+  font-size: var(--accent-font-size);
+  line-height: 1.5;
+}
+
+.form {
+  padding-block-start: 30px;
+}
+
+.popup::backdrop {
+  opacity: 0.75;
+  background-color: var(--accent-color);
+}
+
+.popup__floppy-icon {
+  flex-shrink: 0;
+  inline-size: 39px;
+}
+
+
+@media (width < 1440px) {
+
+  .section-save__button {
+    flex-direction: column;
+    padding: 12px 20px;
+  }
+
+  .floppy-icon {
+    width: 28px;
+  }
+
 }
