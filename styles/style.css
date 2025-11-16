@@ -138,7 +138,7 @@
   line-height: 1.17em;
 }
 
-.content__button{
+.content__button {
   display: flex;
   justify-content : flex-end;
   align-items: center;
